@@ -1,7 +1,7 @@
 # DTMF_decorder
 DTMF(phone dial) decorder with python pyaudio module. notice! If the program doesn't work well, adjust the volume. It does not work well if the volume is too large or too small.
 
-videos : https://youtu.be/ed_OE0bchmE
+video : https://youtu.be/ed_OE0bchmE
 
 test Environment :
   python 3.6.6
