@@ -24,8 +24,8 @@ cols_freq.append(1477)
 cols_freq.append(1633)
 rows = [False]*4
 cols = [False]*4
-decording = True
-timer=0
+decording = True 
+timer=0 #t일정 시간이 지나면 공백(" ")을 출력할 때 타이머로
 
 def init():
     line.set_data([], [])
@@ -41,6 +41,7 @@ def animate(i):
     y = y[range(int(n/2))]
     line.set_data(x, y)
 
+    #가로, 세로 주파수들을 20Hz 범위 내로 측정함
     for i in range(4):
         for j in range(20):
             if(y[int((rows_freq[i]+10-j)*CHUNK/RATE)]>500):
@@ -54,7 +55,7 @@ def animate(i):
                 break
             else:cols[i] = False
 
-    # 가로 세로 모두 한개씩만 있다면
+    # DTMF 음이 감지되면 출력
     if(rows.count(True) == 1 and cols.count(True) == 1):
         timer = 1
         if(decording == False):
